@@ -16,6 +16,7 @@
     "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
+    "bootstrap-stylus": "^0.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssmin": "^0.1.7",

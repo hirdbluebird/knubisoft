@@ -1,5 +1,64 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
+	main
+		div.container
+			section.slider
+				div.slide
+					img(src="images/slide-1.jpg")
+			section.content-section
+				div.breedcrumbs-block
+					ul.breedcrumbs
+						each val in ['Home','Catalog','Category Name']
+							li
+								a(href="#")= val
+				div.col-md-3
+					div#sidebar-menu
+						div.list-group-panel
+							a(href="#sub-menu-1", data-toggle="collapse", data-parent="#sidebar-menu") Cars
+							div(id="sub-menu-1", class="collapse")
+								a(href="#", class="list-group-item") Mersedes
+								a(href="#", class="list-group-item") BMV
+								a(href="#", class="list-group-item") Aston Martin
+							a(href="#sub-menu-2", data-toggle="collapse", data-parent="#sidebar-menu") Cars
+							div(id="sub-menu-2", class="collapse")
+								a(href="#", class="list-group-item") Mersedes
+								a(href="#", class="list-group-item") BMV
+								a(href="#", class="list-group-item") Aston Martin	
+							a(href="#sub-menu-3", data-toggle="collapse", data-parent="#sidebar-menu") Cars
+							div(id="sub-menu-3", class="collapse")
+								a(href="#", class="list-group-item") Mersedes
+								a(href="#", class="list-group-item") BMV
+								a(href="#", class="list-group-item") Aston Martin	
+					a(href="", class="price-list__link")
+						img(src="images/icon-pricelist.png", alt="")
+						span Price List
+				div.col-md-9
+					div.item-section
+						each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
+							div.col-md-4
+								div.item-block
+									div.item-block__image-block
+										img(src="images/item.jpg", alt="")
+										p.item-block__image-block-text Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.
+									div.item-block__price-block
+										a(href="#", class="item-block__price-block-link") $ #{val}
+										a(href="#", class="item-block__price-block-cart")
+											img(src="images/icon-cart.png")
+						div.pagination-block
+							- var n = 1;
+							while n <= 7
+								a(href="#", class="pagination-block__link")= n++
+						div.item-section__divider
+						div.item-section__footer
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+	footer
+		div.container
+			p.copyright &copy; Knubisoft 2012–2013, <br/>All Rights Reserved. 
+			nav
+				ul
+					each val in ['home','catalog','shipping and payment','price','contacts']
+						li
+							a(href="")= val
+

@@ -1,7 +1,30 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/css/main.min.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+	body
+		header
+			nav.navbar.navbar-default
+				div.container
+					div.navbar-header
+						button(type="button",class="navbar-toggle collapsed",data-toggle="collapse",data-target="#navbar", aria-expanded="false")
+							span.sr-only Toggle Navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand
+							img(src="images/logo.png", alt="")
+						div.navbar-feedback__block.pull-right
+							span +3 (050) 777 77 77
+							span +3 (050) 777 77 77
+							a(class="navbar-feedback__link", href="") Feedback
+
+					div#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav.navbar-right
+							each val in ['home','catalog','shipping and payment','price','contacts']
+								li
+									a(href="")= val
+		block content

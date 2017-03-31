@@ -2,7 +2,7 @@ doctype html
 html
 	head
 		title= title
-		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+		link(href="stylesheets/css/main.min.css", rel="stylesheet")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 	body
@@ -13,9 +13,9 @@ html
 					a(class="header-top-block__logo-link.pull-left", href="")
 						img(src="images/logo.png", alt="")
 					div.header-top-block__feedback-block.pull-right
-						a(href="") +3 (050) 777 77 77
-						a(href="") +3 (050) 777 77 77
-						a(href="",class="header-top-block__feedback-block-link") Feedback
+						a(href="#") +3 (050) 777 77 77
+						a(href="#") +3 (050) 777 77 77
+						a(href="#",class="header-top-block__feedback-block-link") Feedback
 
 				nav.navbar.navbar-default
 					div.navbar-header
@@ -28,4 +28,4 @@ html
 						ul.nav.navbar-nav.navbar-right
 							each val in ['home','catalog','shipping and payment','price','contacts']
 								li
-									a(href="")= val
+									a(href="#")= val

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
-var bootstrap = require('bootstrap-stylus');
+var bootstrap = require('bootstrap-styl');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 

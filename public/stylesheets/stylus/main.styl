@@ -1,7 +1,41 @@
+//VARIABLES
+$black-light-color = #282c37
+
+// Makes container's width 980px + 10px padding from both sides
 $grid-gutter-width = 20px
 $container-md = 980px + $grid-gutter-width
 $container-lg = 980px + $grid-gutter-width
+
+// col-md class breakpoint
 $screen-md-min = 1010px
+
+//navbar properties
+$navbar-height = 80px
+$navbar-margin-bottom = 0px
+$navbar-border-radius = 0px
+$navbar-padding-vertical = 0px
+$navbar-default-bg = $black-light-color
+$navbar-default-border = $black-light-color
+$navbar-default-link-color = #fff
+$navbar-default-link-hover-color = #fff
+.nav.navbar-nav
+	display:table
+	width:100%
+	li
+		display:table-cell
+		float:none
+		text-align:center
+		a
+			display:inline-block
+			margin: 0px 50px
+			padding:0px
+			text-transform: uppercase
+		a:hover
+			text-decoration: underline			
+	li:not(:last-child)
+		border-right: 2px solid #424757
+
+
 
 @import 'bootstrap'
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700')

@@ -7,22 +7,23 @@ html
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 	body
 		header
-			div.header-top-block.clearfix
-				a.header-top-block__logo-link.pull-left
-					img(src="images/logo.png", alt="")
-				div.header-top-block__feedback-block.pull-right
-					a(href="") +3 (050) 777 77 77
-					a(href="") +3 (050) 777 77 77
-					a.header-top-block__feedback-block-link Feedback
-			nav.navbar.navbar-default
-				div.container
+			div.container
+
+				div.header-top-block.clearfix
+					a(class="header-top-block__logo-link.pull-left", href="")
+						img(src="images/logo.png", alt="")
+					div.header-top-block__feedback-block.pull-right
+						a(href="") +3 (050) 777 77 77
+						a(href="") +3 (050) 777 77 77
+						a(href="",class="header-top-block__feedback-block-link") Feedback
+
+				nav.navbar.navbar-default
 					div.navbar-header
 						button(type="button",class="navbar-toggle collapsed",data-toggle="collapse",data-target="#navbar", aria-expanded="false")
 							span.sr-only Toggle Navigation
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-
 					div#navbar.navbar-collapse.collapse
 						ul.nav.navbar-nav.navbar-right
 							each val in ['home','catalog','shipping and payment','price','contacts']

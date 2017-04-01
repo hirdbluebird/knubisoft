@@ -1,33 +1,23 @@
-doctype html
-html
-	head
-		title= title
-		link(href="stylesheets/css/main.min.css", rel="stylesheet")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-		script(src="javascripts/main.js")
-	body
-		header
+header
+	.header-top-block.clearfix
+		.container
+			a(class="header-top-block__logo-link.pull-left", href="")
+				img(src="images/logo.png", alt="")
+			.header-top-block__feedback-block.pull-right
+				a(href="#") +3 (050) 777 77 77
+				a(href="#") +3 (050) 777 77 77
+				a(href="#",class="header-top-block__feedback-block-link") Feedback
 
-			div.header-top-block.clearfix
-				div.container
-					a(class="header-top-block__logo-link.pull-left", href="")
-						img(src="images/logo.png", alt="")
-					div.header-top-block__feedback-block.pull-right
-						a(href="#") +3 (050) 777 77 77
-						a(href="#") +3 (050) 777 77 77
-						a(href="#",class="header-top-block__feedback-block-link") Feedback
-
-			nav.navbar.navbar-default
-				div.container
-					div.navbar-header
-						button(type="button",class="navbar-toggle collapsed",data-toggle="collapse",data-target="#navbar", aria-expanded="false")
-							span.sr-only Toggle Navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-					div#navbar.navbar-collapse.collapse
-						ul.nav.navbar-nav
-							each val in ['home','catalog','shipping and payment','price','contacts']
-								li
-									a(href="#")= val
+	nav.navbar.navbar-default
+		.container
+			.navbar-header
+				button(type="button",class="navbar-toggle collapsed",data-toggle="collapse",data-target="#navbar", aria-expanded="false")
+					span.sr-only Toggle Navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+			#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav
+					each val in ['home','catalog','shipping and payment','price','contacts']
+						li
+							a(href="#")= val

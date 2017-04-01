@@ -1,0 +1,8 @@
+.carousel.slide.carousel-fade(id="carousel", data-ride="carousel")
+		ol.carousel-indicators
+			each val in [0,1,2,3]
+				li(data-slide-to=val, data-target="#carousel")
+		.carousel-inner
+			each val in [0,1,2,3]
+				.item
+					img(src="images/slide-1.jpg", alt="")

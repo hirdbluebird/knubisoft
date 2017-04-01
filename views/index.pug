@@ -3,9 +3,14 @@ block content
 include includes/header.pug
 
 main
-	section.slider-section
-		div.slide
-			img(src="images/slide-1.jpg", style="max-width:100%")
+	div(id="carousel", class="carousel slide carousel-fade", data-ride="carousel")
+		ol.carousel-indicators
+			each val in [0,1,2,3]
+				li(data-slide-to=val, data-target="#carousel")
+		div.carousel-inner
+			each val in [0,1,2,3]
+				div.item
+					img(src="images/slide-1.jpg", alt="")
 	section.content-section
 		div.container
 			div.breedcrumbs-block

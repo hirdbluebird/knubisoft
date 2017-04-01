@@ -9,7 +9,7 @@ $container-lg = 980px + $grid-gutter-width
 // col-md class breakpoint
 $screen-md-min = 1010px
 
-//navbar properties
+// navbar properties
 $navbar-height = 80px
 $navbar-margin-bottom = 0px
 $navbar-border-radius = 0px
@@ -18,9 +18,21 @@ $navbar-default-bg = $black-light-color
 $navbar-default-border = $black-light-color
 $navbar-default-link-color = #fff
 $navbar-default-link-hover-color = #fff
+
+
+
+@import 'bootstrap'
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700')
+
+
+body
+	font-family: 'Arimo', sans-serif
+	color: #767676
+
 .nav.navbar-nav
 	display:table
 	width:100%
+	margin-top:30px
 	li
 		display:table-cell
 		float:none
@@ -35,12 +47,11 @@ $navbar-default-link-hover-color = #fff
 	li:not(:last-child)
 		border-right: 2px solid #424757
 
-
-
-@import 'bootstrap'
-@import url('https://fonts.googleapis.com/css?family=Arimo:400,700')
-
-
-body
-	font-family: 'Arimo', sans-serif
-	color: #767676
+.header-top-block
+	&__feedback-block
+		&-link
+			float:right
+			background-color: $black-light-color
+			text-transform:uppercase
+			color: #fff
+			padding: 5px

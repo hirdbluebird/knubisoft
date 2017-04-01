@@ -19,20 +19,24 @@ main
 				include includes/sidebar.pug
 			div.col-md-9
 				div.item-section
-					each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
-						div.col-md-4
-							div.item-block
-								div.item-block__image-block
-									img(src="images/item.jpg", alt="")
-									p.item-block__image-block-text Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.
-								div.item-block__price-block
-									a(href="#", class="item-block__price-block-link") $ #{val}
-									a(href="#", class="item-block__price-block-cart")
-										img(src="images/icon-cart.png")
-					div.pagination-block
-						- var n = 1;
-						while n <= 7
-							a(href="#", class="pagination-block__link")= n++
+					div.item-section__item-block
+						each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
+							div.col-md-4
+								div.item-block
+									div.item-block__image-block
+										img(src="images/item.jpg", alt="")
+										p.item-block__image-block-text Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.
+									div.item-block__cart-block.clearfix
+										span.item-block__cart-block-price.pull-left $ #{val}
+										a(href="#", class="item-block__cart-block-add-item pull-right")
+											img(src="images/icon-cart.png")
+					//- pagination
+					nav(aria-label="Page pagination")
+						ul.pagination
+							- var n = 1;
+							while n <= 7
+								li
+									a(href="#", class="pagination-block__link")= n++
 					div.item-section__divider
 					div.item-section__footer
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.

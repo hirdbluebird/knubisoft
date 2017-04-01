@@ -1,24 +1,46 @@
 //VARIABLES
-$black-light-color = #282c37
-
+$black-light-color = #767676
+$black-dark-color  = #282c37
+$transparent       = transparent
 // Makes container's width 980px + 10px padding from both sides
 $grid-gutter-width = 20px
-$container-md = 980px + $grid-gutter-width
-$container-lg = 980px + $grid-gutter-width
+$container-md      = 980px + $grid-gutter-width
+$container-lg      = 980px + $grid-gutter-width
 
 // col-md class breakpoint
-$screen-md-min = 1010px
+$screen-md-min     = 1010px
 
 // navbar properties
-$navbar-height = 80px
-$navbar-margin-bottom = 0px
-$navbar-border-radius = 0px
-$navbar-padding-vertical = 0px
-$navbar-default-bg = $black-light-color
-$navbar-default-border = $black-light-color
-$navbar-default-link-color = #fff
+$navbar-height                   = 80px
+$navbar-margin-bottom            = 0px
+$navbar-border-radius            = 0px
+$navbar-padding-vertical         = 0px
+$navbar-default-bg               = $black-dark-color
+$navbar-default-border           = $black-dark-color
+$navbar-default-link-color       = #fff
 $navbar-default-link-hover-color = #fff
 
+// carousel properties
+$carousel-indicator-border-color = rgba(0,0,0,0.05)
+$carousel-indicator-active-bg    = #fff
+ol.carousel-indicators li
+	background-color: rgba(0,0,0,0.2)
+
+
+// breadcrumb properties
+$breadcrumb-bg                 = $transparent
+$breadcrumb-color              = $black-dark-color
+$breadcrumb-color-hover        = $black-dark-color
+$breadcrumb-padding-vertical   = 40px
+$preadcrumb-padding-horizontal = 0px
+$breadcrumb-separator          = "▸"
+
+// list group properties
+$list-group-border           = $transparent
+$list-group-hover-bg         = $transparent
+$list-group-link-color       = $black-light-color
+$list-group-active-bg        = $transparent
+$list-group-link-hover-color = $black-dark-color
 
 
 @import 'bootstrap'
@@ -26,32 +48,108 @@ $navbar-default-link-hover-color = #fff
 
 
 body
-	font-family: 'Arimo', sans-serif
-	color: #767676
+	font-family   'Arimo', sans-serif
+	color         #767676
+
+
+a.list-group-item:hover,
+a.list-group-item:focus
+	text-decoration        underline
+.list-group-panel > div
+	margin-left            40px
+	padding                5px 0px
+	a.list-group-item
+		position             relative
+		padding              5px 10px
+		font-size            0.95em
+		&:before
+			position           absolute
+			content            ''
+			left               0em
+			top                .7em
+			width              0.5em
+			height             0.5em
+			background-color   $black-light-color
+			border-radius      50%
+	
 
 .nav.navbar-nav
-	display:table
-	width:100%
-	margin-top:30px
+	display              table
+	width                100%
+	margin-top           30px
 	li
-		display:table-cell
-		float:none
-		text-align:center
+		display            table-cell
+		float              none
+		text-align         center
+		&:not(:last-child)
+			border-right     2px solid #424757
 		a
-			display:inline-block
-			margin: 0px 50px
-			padding:0px
-			text-transform: uppercase
+			display          inline-block
+			margin           0px 50px
+			padding          0px
+			text-transform   uppercase
 		a:hover
-			text-decoration: underline			
-	li:not(:last-child)
-		border-right: 2px solid #424757
+			text-decoration  underline			
+
 
 .header-top-block
 	&__feedback-block
 		&-link
-			float:right
-			background-color: $black-light-color
-			text-transform:uppercase
-			color: #fff
-			padding: 5px
+			float              right
+			background-color   $black-dark-color
+			text-transform     uppercase
+			color              #fff 
+			padding            5px
+
+
+.price-list__link
+	img
+		margin-right   10px
+	span
+		font-weight    bold
+		color          $black-dark-color
+
+
+
+.item-block
+	border               1px solid #e4e4e4
+	border-radius        3px
+	&__image-block
+		padding            10px
+		border-bottom      1px solid #e4e4e4
+		img
+			max-width        100%
+			margin-bottom    10px
+		&-text
+			text-transform   uppercase
+			text-align       center
+			height           4em
+			overflow         hidden
+	&__cart-block
+		padding            10px
+		&-price
+			font-weight      bold
+			font-size        1.2em
+			color            $black-dark-color
+
+
+.item-section__divider
+	border-top        1px solid #777777
+	margin-bottom     40px
+.item-section__footer
+	p
+		display         inline-block
+		width           45%
+	p:first-child
+		margin-right    10%
+
+footer
+	border-top           1px solid #eaeaea
+.footer-nav
+	list-style           none
+	padding              0px
+	li
+		float              right
+	li:not(:last-child)
+		margin-right       60px
+		   

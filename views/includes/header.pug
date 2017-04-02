@@ -21,6 +21,7 @@ header
 					span.icon-bar
 			#navbar.navbar-collapse.collapse
 				ul.nav.navbar-nav
-					each val in ['home','catalog','shipping and payment','price','contacts']
-						li
-							a(href="#")= val
+					if navLinks != null
+						each val in navLinks
+							li
+								a(href="#")= val

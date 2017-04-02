@@ -3,6 +3,7 @@ footer
 		p.copyright.pull-left &copy; Knubisoft 2012–2013, <br/>All Rights Reserved. 
 		nav.pull-right
 			ul.footer-nav
-				each val in ['home','catalog','shipping and payment','price','contacts']
-					li
-						a(href="#")= val
+				if navLinks != null
+					each val in navLinks
+						li
+							a(href="#")= val

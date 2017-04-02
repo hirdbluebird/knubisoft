@@ -1,20 +1,11 @@
 div#sidebar-menu
 	div.list-group-panel
-		a(class="list-group-item", href="#sub-menu-1", data-toggle="collapse", data-parent="#sidebar-menu") Cars
-		div(id="sub-menu-1", class="collapse")
-			a(href="#", class="list-group-item") Mersedes
-			a(href="#", class="list-group-item") BMV
-			a(href="#", class="list-group-item") Aston Martin
-		a(class="list-group-item", href="#sub-menu-2", data-toggle="collapse", data-parent="#sidebar-menu") Household Appliances
-		div(id="sub-menu-2", class="collapse")
-			a(href="#", class="list-group-item") Microwaves
-			a(href="#", class="list-group-item") Fridges
-			a(href="#", class="list-group-item") Dishwashes
-		a(class="list-group-item", href="#sub-menu-3", data-toggle="collapse", data-parent="#sidebar-menu") Mobile Equipment
-		div(id="sub-menu-3", class="collapse")
-			a(href="#", class="list-group-item") Mersedes
-			a(href="#", class="list-group-item") BMV
-			a(href="#", class="list-group-item") Aston Martin	
+		each val, index in sidebarMenu
+			a.list-group-item(href="#sub-menu-#{index}", data-toggle="collapse", data-parent="#sidebar-menu")= val.menu
+			div(id="sub-menu-#{index}", class="collapse")
+				each x in val.submenu
+					a(href="#", class="list-group-item")= x
+			
 a(href="", class="price-list__link")
 	img(src="images/icon-pricelist.png", alt="")
 	span Price List

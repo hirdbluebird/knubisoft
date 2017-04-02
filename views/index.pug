@@ -19,17 +19,17 @@ block content
 							.item-section__item-block
 								.row
 
-									each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
+									each val in itemPrice
 										.col-md-4.col-sm-6
 											include includes/item.pug
 
 							//- pagination
 							nav.item-section__pagination(aria-label="Page pagination")
 								ul.pagination
-									- var n = 1;
-									while n <= 7
+									- var count = 1;
+									while count <= paginationCount
 										li
-											a(href="#")= n++
+											a(href="#")= count++
 							.item-section__divider
 							.item-section__footer
 								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.

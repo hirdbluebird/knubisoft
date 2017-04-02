@@ -14,14 +14,17 @@ block content
 
 					.col-md-9
 						.item-section
-							.item-section__item-block
 
-								each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
-									.col-md-4
-										include includes/item.pug
+							//- items
+							.item-section__item-block
+								.row
+
+									each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
+										.col-md-4
+											include includes/item.pug
 
 							//- pagination
-							nav(aria-label="Page pagination")
+							nav.item-section__pagination(aria-label="Page pagination")
 								ul.pagination
 									- var n = 1;
 									while n <= 7

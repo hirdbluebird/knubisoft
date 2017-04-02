@@ -33,6 +33,23 @@ $breadcrumb-padding-vertical   = 35px
 $breadcrumb-padding-horizontal = 0px
 $breadcrumb-separator          = "▸"
 
+
+// pagination properties
+$pagination-color           = $black-light-color
+$pagination-hover-color     = $black-dark-color
+$pagination-active-color    = $black-dark-color
+
+$pagination-border          = $transparent
+$pagination-hover-border    = $transparent
+$pagination-active-border   = $transparent
+
+$pagination-bg              = $transparent
+$pagination-hover-bg        = $transparent
+$pagination-active-bg       = $transparent
+ 
+
+
+
 // list group properties
 $list-group-border           = $transparent
 $list-group-hover-bg         = $transparent
@@ -60,13 +77,18 @@ body
 		color            $black-light-color
 		pointer-events   none
 
-
+// PAGINATION
+.pagination
+	li:not(.active) a:hover
+		text-decoration   underline
+	li.active a
+		font-size         1.1em
 
 
 // SIDEBAR
 a.list-group-item:hover,
 a.list-group-item:focus
-	text-decoration        underline
+	text-decoration          underline
 .list-group-panel 
 	& > div
 		margin-left            7px
@@ -90,13 +112,13 @@ a.list-group-item:focus
 			padding-top          0px
 		
 .price-list__link
-	display          inline-block
-	margin-top       50px
+	display                  inline-block
+	margin-top               50px
 	img
-		margin-right   10px
+		margin-right           10px
 	span
-		font-weight    bold
-		color          $black-dark-color
+		font-weight            bold
+		color                  $black-dark-color
 
 
 
@@ -108,37 +130,40 @@ a.list-group-item:focus
 .header-top-block
 	padding                15px 0px
 .nav.navbar-nav
-	display              table
-	width                100%
-	margin-top           30px
+	display                table
+	width                  100%
+	margin-top             30px
 	li
-		display            table-cell
-		float              none
-		text-align         center
+		display              table-cell
+		float                none
+		text-align           center
 		&:not(:last-child)
-			border-right     2px solid #424757
+			border-right       2px solid #424757
 		a
-			display          inline-block
-			margin           0px 50px
-			padding          0px
-			text-transform   uppercase
+			display            inline-block
+			margin             0px 50px
+			padding            0px
+			text-transform     uppercase
 		a:hover
-			text-decoration  underline			
+			text-decoration    underline			
 .feedback-block
-	margin-top           10px
+	margin-top             10px
 	&__feedback-link
-		display            inline-block
-		background-color   $black-dark-color
-		text-transform     uppercase
-		color              #fff 
-		padding            10px 23px
+		display              inline-block
+		background-color     $black-dark-color
+		text-transform       uppercase
+		color                #fff 
+		padding              10px 23px
+		&:hover
+			color              white
+			text-decoration    none
 	&__phones
-		margin-right       10px
+		margin-right         10px
 		a
-			display          block
-			color            $black-light-color
-			font-size        16px
-			letter-spacing   .9px
+			display            block
+			color              $black-light-color
+			font-size          16px
+			letter-spacing     .9px
 
 
 // SLIDER
@@ -159,6 +184,7 @@ a.list-group-item:focus
 .item-block
 	border               1px solid #e4e4e4
 	border-radius        3px
+	margin-bottom        20px
 	&__image-block
 		padding            10px
 		border-bottom      1px solid #e4e4e4
@@ -179,23 +205,32 @@ a.list-group-item:focus
 
 // ITEM SECTION
 .item-section__divider
-	border-top        1px solid #777777
-	margin-bottom     40px
+	border-top                1px solid #777777
+	margin-bottom             40px
 .item-section__footer
 	p
-		display         inline-block
-		width           45%
+		display                 inline-block
+		width                   45%
 	p:first-child
-		margin-right    10%
+		margin-right            10%
+.item-section__pagination
+	text-align                center
+
+
 
 // FOOTER
 footer
-	border-top           1px solid #eaeaea
+	border-top            1px solid #eaeaea
+	margin-top            50px
+	padding               45px 0px
 .footer-nav
-	list-style           none
-	padding              0px
+	list-style            none
+	padding               0px
 	li
-		float              left
+		float               left
+		a
+			text-transform    uppercase
+			color             $black-dark-color
 	li:not(:last-child)
-		margin-right       60px
+		margin-right        60px
 		   

@@ -8,26 +8,26 @@ block content
 		section.content-section
 			.container
 				include includes/breadcrumbs.pug
+				.row
+					.col-md-3
+						include includes/sidebar.pug
 
-				.col-md-3
-					include includes/sidebar.pug
+					.col-md-9
+						.item-section
+							.item-section__item-block
 
-				.col-md-9
-					.item-section
-						.item-section__item-block
+								each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
+									.col-md-4
+										include includes/item.pug
 
-							each val in ['550.95','350.95','850.95','550.95','350.95','850.95']
-								.col-md-4
-									include includes/item.pug
-
-						//- pagination
-						nav(aria-label="Page pagination")
-							ul.pagination
-								- var n = 1;
-								while n <= 7
-									li
-										a(href="#", class="pagination-block__link")= n++
-						.item-section__divider
-						.item-section__footer
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+							//- pagination
+							nav(aria-label="Page pagination")
+								ul.pagination
+									- var n = 1;
+									while n <= 7
+										li
+											a(href="#", class="pagination-block__link")= n++
+							.item-section__divider
+							.item-section__footer
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.

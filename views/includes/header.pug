@@ -1,12 +1,15 @@
 header
 	.header-top-block.clearfix
 		.container
+
 			a(class="header-top-block__logo-link.pull-left", href="")
 				img(src="images/logo.png", alt="")
-			.header-top-block__feedback-block.pull-right
-				a(href="#") +3 (050) 777 77 77
-				a(href="#") +3 (050) 777 77 77
-				a(href="#",class="header-top-block__feedback-block-link") Feedback
+
+			.feedback-block.pull-right
+				.feedback-block__phones.pull-left
+					a(href="#") +3 (050) 777 77 77
+					a(href="#") +3 (050) 777 77 77
+				a.feedback-block__feedback-link(href="#modal", data-toggle="modal", data-target="#modal") Feedback
 
 	nav.navbar.navbar-default
 		.container

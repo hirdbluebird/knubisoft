@@ -22,17 +22,15 @@ $navbar-default-link-hover-color = #fff
 
 // carousel properties
 $carousel-indicator-border-color = rgba(0,0,0,0.05)
-$carousel-indicator-active-bg    = #fff
-ol.carousel-indicators li
-	background-color: rgba(0,0,0,0.2)
+$carousel-indicator-active-bg    = #fff	
 
 
 // breadcrumb properties
 $breadcrumb-bg                 = $transparent
 $breadcrumb-color              = $black-dark-color
 $breadcrumb-color-hover        = $black-dark-color
-$breadcrumb-padding-vertical   = 40px
-$preadcrumb-padding-horizontal = 0px
+$breadcrumb-padding-vertical   = 35px
+$breadcrumb-padding-horizontal = 0px
 $breadcrumb-separator          = "▸"
 
 // list group properties
@@ -52,27 +50,63 @@ body
 	color         #767676
 
 
+// BREADCRUMBS
+.breadcrumb
+	margin-bottom      0px
+	li a
+		color            $black-dark-color
+		padding-right    10px
+	li:last-child a
+		color            $black-light-color
+		pointer-events   none
+
+
+
+
+// SIDEBAR
 a.list-group-item:hover,
 a.list-group-item:focus
 	text-decoration        underline
-.list-group-panel > div
-	margin-left            40px
-	padding                5px 0px
-	a.list-group-item
-		position             relative
-		padding              5px 10px
-		font-size            0.95em
-		&:before
-			position           absolute
-			content            ''
-			left               0em
-			top                .7em
-			width              0.5em
-			height             0.5em
-			background-color   $black-light-color
-			border-radius      50%
-	
+.list-group-panel 
+	& > div
+		margin-left            7px
+		padding                5px 0px
+		a.list-group-item
+			position             relative
+			padding              5px 10px
+			font-size            0.95em
+			&:before
+				position           absolute
+				content            ''
+				left               0em
+				top                .9em
+				width              0.3em
+				height             0.3em
+				background-color   $black-light-color
+				border-radius      50%
+	& > a.list-group-item
+		padding-left           0px
+		&:first-child
+			padding-top          0px
+		
+.price-list__link
+	display          inline-block
+	margin-top       50px
+	img
+		margin-right   10px
+	span
+		font-weight    bold
+		color          $black-dark-color
 
+
+
+
+
+
+
+// HEADER
+.header-top-block
+	padding                15px 0px
 .nav.navbar-nav
 	display              table
 	width                100%
@@ -90,27 +124,38 @@ a.list-group-item:focus
 			text-transform   uppercase
 		a:hover
 			text-decoration  underline			
+.feedback-block
+	margin-top           10px
+	&__feedback-link
+		display            inline-block
+		background-color   $black-dark-color
+		text-transform     uppercase
+		color              #fff 
+		padding            10px 23px
+	&__phones
+		margin-right       10px
+		a
+			display          block
+			color            $black-light-color
+			font-size        16px
+			letter-spacing   .9px
 
 
-.header-top-block
-	&__feedback-block
-		&-link
-			float              right
-			background-color   $black-dark-color
-			text-transform     uppercase
-			color              #fff 
-			padding            5px
+// SLIDER
+.carousel-inner .item img
+	width                     100%
+.carousel-indicators
+	bottom                    0px
+	li
+		width                   12px
+		height                  12px
+		margin                  0px 5px
+		background-color:       rgba(0,0,0,0.2)
+	li.active
+		margin                  0px 5px
 
 
-.price-list__link
-	img
-		margin-right   10px
-	span
-		font-weight    bold
-		color          $black-dark-color
-
-
-
+// ITEM BLOCK
 .item-block
 	border               1px solid #e4e4e4
 	border-radius        3px
@@ -132,7 +177,7 @@ a.list-group-item:focus
 			font-size        1.2em
 			color            $black-dark-color
 
-
+// ITEM SECTION
 .item-section__divider
 	border-top        1px solid #777777
 	margin-bottom     40px
@@ -143,6 +188,7 @@ a.list-group-item:focus
 	p:first-child
 		margin-right    10%
 
+// FOOTER
 footer
 	border-top           1px solid #eaeaea
 .footer-nav

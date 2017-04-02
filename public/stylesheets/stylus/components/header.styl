@@ -1,0 +1,43 @@
+// HEADER
+.header-top-block
+	padding                15px 0px
+.nav.navbar-nav
+	display                table
+	width                  100%
+	margin-top             30px
+	li
+		display              table-cell
+		float                none
+		text-align           center
+		&:not(:last-child)
+			border-right       2px solid #424757
+		a
+			display            inline-block
+			margin             0px 50px
+			padding            0px
+			text-transform     uppercase
+			@media (max-width 1018px)
+				margin           0px 10px
+		a:hover
+			text-decoration    underline			
+.feedback-block
+	margin-top             10px
+	&__feedback-link
+		display              inline-block
+		background-color     $black-dark-color
+		text-transform       uppercase
+		color                #fff 
+		padding              10px 23px
+		&:hover
+			color              white
+			text-decoration    none
+	&__phones
+		margin-right         10px
+		a
+			display            block
+			color              $black-light-color
+			font-size          16px
+			line-height        16px
+			letter-spacing     .9px
+		a:first-child
+			margin-bottom      8px

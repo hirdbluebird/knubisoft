@@ -1,0 +1,93 @@
+// BREADCRUMBS
+.breadcrumb
+	margin-bottom      0px
+	li a
+		color            $black-dark-color
+		padding-right    10px
+	li:last-child a
+		color            $black-light-color
+		pointer-events   none
+
+
+
+
+
+// PAGINATION
+.pagination
+	li:not(.active) a:hover
+		text-decoration   underline
+	li.active a
+		font-size         1.1em
+
+
+
+
+
+
+
+// SIDEBAR
+a.list-group-item:hover,
+a.list-group-item:focus
+	text-decoration          underline
+.list-group-panel 
+	& > div
+		margin-left            7px
+		padding                5px 0px
+		a.list-group-item
+			position             relative
+			padding              5px 10px
+			font-size            0.95em
+			&:before
+				position           absolute
+				content            ''
+				left               0em
+				top                .9em
+				width              0.3em
+				height             0.3em
+				background-color   $black-light-color
+				border-radius      50%
+	& > a.list-group-item
+		padding-left           0px
+		&:first-child
+			padding-top          0px
+		
+.price-list__link
+	display                  inline-block
+	margin-top               50px
+	img
+		margin-right           10px
+	span
+		font-weight            bold
+		color                  $black-dark-color
+	@media (max-width: 1018px)
+		margin-top             20px
+		margin-bottom          20px
+
+
+
+
+
+
+// ITEM BLOCK
+.item-block
+	border               1px solid #e4e4e4
+	border-radius        3px
+	margin-bottom        20px
+	&__image-block
+		padding            10px
+		border-bottom      1px solid #e4e4e4
+		img
+			width            100%
+			max-width        100%
+			margin-bottom    10px
+		&-text
+			text-transform   uppercase
+			text-align       center
+			height           4em
+			overflow         hidden
+	&__cart-block
+		padding            10px
+		&-price
+			font-weight      bold
+			font-size        1.2em
+			color            $black-dark-color

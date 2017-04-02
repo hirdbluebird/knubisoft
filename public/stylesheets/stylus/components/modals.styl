@@ -1,0 +1,41 @@
+// MODAL
+button.close
+	font-size           32px
+	opacity             1
+	width               32px
+	margin-right        -32px
+	margin-top          -32px
+	background-color    white
+.modal-dialog
+	margin-top          50px
+.modal-content
+	border-radius       0px
+	.modal-body
+		padding           35px
+.feedback-form
+	h2
+		margin-top        0px
+		text-align        center
+		text-transform    uppercase
+	.submit-button
+		background-color   $black-dark-color
+		border-color       $black-dark-color
+		text-transform     uppercase
+		color              white
+		padding            10px 30px
+	textarea
+		min-height         200px
+	.form-group
+		display flex
+		flex-direction column-reverse
+		align-items flex-start
+	input:required + label
+		position relative
+		cursor pointer
+	input:required + label:before
+		position          absolute
+		content '*'
+		color red
+		font-size 18px
+		top -2px
+		right -8px

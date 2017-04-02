@@ -1,0 +1,42 @@
+// comment: CAROUSEL
+.carousel-inner 
+	.item 
+		transition-property     opacity
+		img
+			width                 100%
+	.item,
+	.active.left,
+	.active.right
+		opacity                 0
+	.active,
+	.next.left,
+	.prev.right
+		opacity                 1
+	.next,
+	.prev,
+	.active.left,
+	.active.right
+		transform               translate3d(0,0,0)
+		left 0
+.carousel-indicators
+	bottom                    0px
+	li
+		width                   12px
+		height                  12px
+		margin                  0px 5px
+		background-color:       rgba(0,0,0,0.2)
+	li.active
+		margin                  0px 5px
+
+// comment: ITEM SECTION
+.item-section__divider
+	border-top                1px solid #777777
+	margin-bottom             40px
+.item-section__footer
+	p
+		display                 inline-block
+		width                   45%
+	p:first-child
+		margin-right            10%
+.item-section__pagination
+	text-align                center

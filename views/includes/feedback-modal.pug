@@ -4,23 +4,23 @@
 			button(class="close", type="button", data-dismiss="modal", aria-label="Close")
 				span(aria-hidden="true") &times;
 			.modal-body
-				form.feedback-form(action="", method="post")
+				form.feedback-form.clearfix(action="", method="post")
 					h2 feedback
 
 					.form-group
+						input#name.form-control(type="text", required)
 						label.control-label(for="name") Name
-						input#name.form-control(type="text")
 
 					.form-group
-						label.control-label(for="phone") Phone
-						input#phone.form-control(type="tel")
+						input#phone.form-control(type="tel", pattern="[0-9]{10}",required)
+						label.control-label(for="phone") Phone (format: 0990844902)
 
 					.form-group
+						input#email.form-control(type="email", required)
 						label.control-label(for="email") Email
-						input#email.form-control(type="email")
 
 					.form-group
-						label(for="text") Text
 						textarea#text.form-control
+						label(for="text") Text
 
-					button.black-button(type="submit") submit
+					button.submit-button.pull-right(type="submit") submit

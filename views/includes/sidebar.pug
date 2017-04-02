@@ -1,11 +1,11 @@
 div#sidebar-menu
 	div.list-group-panel
 		each val, index in sidebarMenu
-			a.list-group-item(href="#sub-menu-#{index}", data-toggle="collapse", data-parent="#sidebar-menu")= val.menu
-			div(id="sub-menu-#{index}", class="collapse")
+			a.list-group-item(href="#sub-menu-" + index, data-toggle="collapse", data-parent="#sidebar-menu")= val.menu
+			div(id="sub-menu-" + index, class="collapse")
 				each x in val.submenu
 					a(href="#", class="list-group-item")= x
-			
+
 a(href="", class="price-list__link")
 	img(src="images/icon-pricelist.png", alt="")
 	span Price List
